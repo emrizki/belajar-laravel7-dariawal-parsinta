@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', $slug)
 
 @section('content')
   <div class="container">
-    My name is {!! $name !!}
+    {{ $slug }}
   </div>
 @endsection
