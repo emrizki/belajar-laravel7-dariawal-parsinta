@@ -32,8 +32,8 @@
                 @csrf
                 @method('delete')
                 <div class="d-flex">
-                  <button class="btn btn-danger mr-2" type="submit">Ya</button>
-                  <button class="btn btn-success" type="submit">Tidak</button>
+                  <button class="btn btn-success mr-2" type="submit">Ya</button>
+                  <button class="btn btn-danger" data-dismiss="modal">Tidak</button>
                 </div>
               </form>
             </div>
