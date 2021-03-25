@@ -16,6 +16,9 @@ Route::post('/posts/store', [PostController::class, 'store']);
 Route::get('/posts/{post:slug}/edit', [PostController::class, 'edit']);
 Route::patch('/posts/{post:slug}/edit', [PostController::class, 'update']);
 
+// Delete
+Route::delete('/posts/{post:slug}/delete', [PostController::class, 'delete']);
+
 // Detail
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::view('contact', 'contact');

@@ -57,4 +57,11 @@ class PostController extends Controller
         session()->flash('success', 'The post was updated.');
         return redirect('posts');
     }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
+        session()->flash("success", "The post was destroyed");
+        return redirect('posts');
+    }
 }
