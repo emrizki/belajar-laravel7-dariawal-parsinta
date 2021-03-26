@@ -1,21 +1,16 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use HasFactory;
     protected $fillable = ['title', 'slug', 'body'];
-    // protected $guarded = [];
-    // public function scopeLatestFirst()
-    // {
-    //     return $this->latest()->first();
-    // }
 
-    // public function scopeLatestPost()
-    // {
-    //     return $this->latest()->get();
-    // }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
